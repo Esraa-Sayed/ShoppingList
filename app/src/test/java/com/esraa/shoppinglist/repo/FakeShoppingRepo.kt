@@ -5,6 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import com.esraa.shoppinglist.data.local.ShoppingItem
 import com.esraa.shoppinglist.data.remote.responses.ImageResponse
 import com.esraa.shoppinglist.other.Resource
+import kotlinx.coroutines.test.StandardTestDispatcher
+import kotlinx.coroutines.test.TestCoroutineDispatcher
 
 class FakeShoppingRepo :ShoppingRepoInterface{
     private val shoppingItems = mutableListOf<ShoppingItem>()
@@ -30,7 +32,7 @@ class FakeShoppingRepo :ShoppingRepoInterface{
         refreshLiveData()
     }
 
-    override fun deleteShoppintItem(shoppingItem: ShoppingItem) {
+    override fun deleteShoppingItem(shoppingItem: ShoppingItem) {
         shoppingItems.remove(shoppingItem)
         refreshLiveData()
     }

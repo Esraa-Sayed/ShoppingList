@@ -1,4 +1,4 @@
-package com.androiddevs.shoppinglisttestingyt.ui
+package com.esraa.shoppinglist.ui
 
 
 import androidx.hilt.lifecycle.ViewModelInject
@@ -13,6 +13,7 @@ import com.esraa.shoppinglist.other.Constant.MAX_NAME_LENGTH
 import com.esraa.shoppinglist.other.Constant.MAX_PRICE_LENGTH
 import com.esraa.shoppinglist.other.Resource
 import com.esraa.shoppinglist.repo.ShoppingRepoInterface
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.Exception
 
@@ -37,11 +38,11 @@ class ShoppingViewModel @ViewModelInject constructor(
         _curImageUrl.postValue(url)
     }
 
-    fun deleteShoppingItem(shoppingItem: ShoppingItem) = viewModelScope.launch {
+    fun deleteShoppingItem(shoppingItem: ShoppingItem) = viewModelScope.launch(Dispatchers.IO ){
         repository.deleteShoppingItem(shoppingItem)
     }
 
-    private fun insertShoppingItemIntoDb(shoppingItem: ShoppingItem) = viewModelScope.launch {
+    fun insertShoppingItemIntoDb(shoppingItem: ShoppingItem) = viewModelScope.launch(Dispatchers.IO) {
         repository.insertShoppingItem(shoppingItem)
     }
 

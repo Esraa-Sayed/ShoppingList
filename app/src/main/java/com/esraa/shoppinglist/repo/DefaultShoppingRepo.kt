@@ -13,11 +13,11 @@ class DefaultShoppingRepo @Inject constructor(
     private val shoppingDao: ShoppingDao,
     private val pixabayAPI: PixabayAPI
 ):ShoppingRepoInterface {
-    override fun insertShoppingItem(shoppingItem: ShoppingItem) {
+    override suspend fun insertShoppingItem(shoppingItem: ShoppingItem) {
         shoppingDao.insertShoppingItem(shoppingItem)
     }
 
-    override fun deleteShoppingItem(shoppingItem: ShoppingItem) {
+    override suspend fun deleteShoppingItem(shoppingItem: ShoppingItem) {
         shoppingDao.deleteShoppingItem(shoppingItem)
     }
 

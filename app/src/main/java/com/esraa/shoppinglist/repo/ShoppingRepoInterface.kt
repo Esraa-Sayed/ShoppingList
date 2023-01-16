@@ -6,8 +6,8 @@ import com.esraa.shoppinglist.data.remote.responses.ImageResponse
 import com.esraa.shoppinglist.other.Resource
 
 interface ShoppingRepoInterface {
-    fun insertShoppingItem(shoppingItem: ShoppingItem)
-    fun deleteShoppingItem(shoppingItem: ShoppingItem)
+    suspend fun  insertShoppingItem(shoppingItem: ShoppingItem)
+    suspend fun deleteShoppingItem(shoppingItem: ShoppingItem)
     fun observeAllShoppingItems():LiveData<List<ShoppingItem>>
     fun observeAllPrices():LiveData<Float>
 

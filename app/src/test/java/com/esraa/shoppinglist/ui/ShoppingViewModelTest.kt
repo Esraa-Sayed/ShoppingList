@@ -2,7 +2,7 @@ package com.esraa.shoppinglist.ui
 
 import MainCoroutineRule
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.androiddevs.shoppinglisttestingyt.ui.ShoppingViewModel
+import androidx.navigation.NavController
 import com.esraa.shoppinglist.getOrAwaitValueTest
 import com.esraa.shoppinglist.other.Constant
 import com.esraa.shoppinglist.other.Status
@@ -12,6 +12,7 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import org.mockito.Mockito
 
 @ExperimentalCoroutinesApi
 class ShoppingViewModelTest{

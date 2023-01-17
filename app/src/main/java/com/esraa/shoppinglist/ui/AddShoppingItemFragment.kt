@@ -40,6 +40,7 @@ class AddShoppingItemFragment @Inject constructor(
                 AddShoppingItemFragmentDirections.actionAddShoppingItemFragmentToImagePickFragment()
             )
         }
+        ivShoppingImage.setImageResource(R.drawable.ic_image)
         val callback = object : OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
                 viewModel.setCurImageUrl("")

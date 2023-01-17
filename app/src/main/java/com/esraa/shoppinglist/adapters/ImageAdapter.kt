@@ -49,13 +49,12 @@ class ImageAdapter @Inject constructor(
         holder.itemView.apply {
             glide.load(url).into(ivShoppingImage)
 
-            setOnItemClickListener {
+            setOnClickListener  {
                 onItemClickListener?.let { click ->
                     click(url)
                 }
             }
         }
-
     }
 
     override fun getItemCount(): Int {

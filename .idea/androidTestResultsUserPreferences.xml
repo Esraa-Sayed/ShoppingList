@@ -34,7 +34,9 @@
             <AndroidTestResultsTableState>
               <option name="preferredColumnWidths">
                 <map>
+                  <entry key="BBPBB19130205208" value="120" />
                   <entry key="Duration" value="90" />
+                  <entry key="HUAWEI&#10; BKK-LX2" value="120" />
                   <entry key="Pixel_2_API_27" value="120" />
                   <entry key="Tests" value="360" />
                 </map>
